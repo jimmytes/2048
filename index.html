@@ -49,20 +49,24 @@
     let screenWidth = window.innerWidth;
     let screenHeight = window.innerHeight;
     if(screenWidth > 640){
-      element.style.width = 640 + 'px'
-    }
-    else{
-      element.style.width = screenWidth - 10 + 'px'
-    }
+          element.style.width = 640 + 'px'
+          element.style.height = screenHeight - 10 + 'px'
+        }
+        else{
+          element.style.width = screenWidth - 10 + 'px'
+          element.style.height = ''
+        }
 
     function adjustElementSize() {
 
       screenWidth = window.innerWidth;
         if(screenWidth > 640){
           element.style.width = 640 + 'px'
+          element.style.height = screenHeight - 10 + 'px'
         }
         else{
           element.style.width = screenWidth - 10 + 'px'
+          element.style.height = ''
         }
     }
 
