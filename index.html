@@ -45,16 +45,29 @@
 <script>
     System.import('./index.js').catch(function(err) { console.error(err); })
     window.addEventListener('resize', adjustElementSize);
-
-    function adjustElementSize() {
-        console.log("123")
+    const element = document.getElementById('GameDiv');
+    let screenWidth = window.innerWidth;
+    let screenHeight = window.innerHeight;
+    if(screenWidth > 640){
+      element.style.width = 640 + 'px'
+    }
+    else{
+      element.style.width = screenWidth - 10 + 'px'
     }
 
-    let screenHeight = window.innerHeight;
-    console.log('螢幕高度:', screenHeight);
-    //const element = document.getElementById('GameDiv');
-    var canvas = document.getElementById("GameDiv");
-    canvas.style.height = screenHeight;  // 設置高度為 400px
+    function adjustElementSize() {
+
+      screenWidth = window.innerWidth;
+        if(screenWidth > 640){
+          element.style.width = 640 + 'px'
+        }
+        else{
+          element.style.width = screenWidth - 10 + 'px'
+        }
+    }
+
+    
+    
 </script>
   </body>
 </html>
